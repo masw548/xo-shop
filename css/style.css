@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/* ........................ */
+.card-body{
+    position: relative;
+}
+.card-body span{
+    position: absolute;
+    right: 1%;
+    color: #0d6efd;
+}
+.card img:hover{
+    transform: scale(1.5);
+}
+.card{
+    overflow: hidden;
+}
+.card img{
+    transition: 1s;
+}
+.card .card-body span{
+    color:#08285a
+}

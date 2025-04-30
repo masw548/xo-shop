@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/F.png" type="image/x-icon">
+  <title>js task 1</title>
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- my css -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+<h1 class="display-1 text-center text-primary">Style</h1>
+
+<!-- instead of container i used px-5 to earn much width -->
+<div class="px-5">
+  <!-- for responsivity -->
+  <div class="row" >
+    <div class="col-md-9">
+      <!-- here is main content -->
+      <div class=" row d-flex justify-content-center mx-auto">
+        <div class="col-md-6 col-lg-4 ">
+          <!-- products cards -->
+          <div class="card mx-auto mb-3">
+                <img src="img/2d-belt-black-2d.avif" class="card-img-top" alt="..."  >
+                <div class="card-body">
+                   <h5 class="card-title" price="450">Black Belt</h5>
+                   <p class="card-text">press button to add the product to your cart</p>
+                   <a class="btn btn-primary" price="450" prodcutName="Black Belt">Add To Cart</a>
+                   <span  data-bs-toggle="popover" data-bs-trigger="hover" title="expensive!!"
+                    data-bs-content='Get 10% off if you purchase over $1,000.'>price is: <br> 450$</span>
+                </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 ">
+          <div class="card mx-auto mb-3">
+              <img src="img/2d-black-bag-2d.avif" class="card-img-top" alt="...">
+              <div class="card-body">
+                 <h5 class="card-title" price="450">Black Bag</h5>
+                 <p class="card-text">press button to add the product to your cart</p>
+                 <a class="btn btn-primary" price="600" prodcutName="Black Bag">Add To Cart</a>
+                 <span data-bs-toggle="popover" data-bs-trigger="hover" title="expensive!!" 
+                    data-bs-content='Get 10% off if you purchase over $1,000.'>price is: <br> 600$</span>
+              </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 ">
+          <div class="card mx-auto mb-3">
+            <img src="img/best-bag-white.avif" class="card-img-top" alt="...">
+            <div class="card-body">
+               <h5 class="card-title" price="450">white bag</h5>
+               <p class="card-text">press button to add the product to your cart</p>
+               <a class="btn btn-primary" price="500" prodcutName="white bag">Add To Cart</a>
+                  <span data-bs-toggle="popover" data-bs-trigger="hover"
+                  title="expensive!!" data-bs-content='Get 10% off if you purchase over $1,000.'>price is: <br> 500$</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 ">
+          <div class="card mx-auto mb-3">
+              <img src="img/best-belt-pink.avif" class="card-img-top" alt="...">
+              <div class="card-body">
+                 <h5 class="card-title" price="450">Pink belt</h5>
+                 <p class="card-text">press button to add the product to your cart</p>
+                 <a class="btn btn-primary" price="150" prodcutName="Pink belt">Add To Cart</a>
+                    <span data-bs-toggle="popover" data-bs-trigger="hover"
+                    title="expensive!!" data-bs-content='Get 10% off if you purchase over $1,000.'>price is: <br> 150$</span>
+              </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 ">
+          <div class="card mx-auto mb-3">
+              <img src="img/best-floral-silk-scarf-women.avif" class="card-img-top" alt="...">
+              <div class="card-body">
+                 <h5 class="card-title" price="450">Silk floral</h5>
+                 <p class="card-text">press button to add the product to your cart</p>
+                 <a class="btn btn-primary" price="850" prodcutName="Silk floral">Add To Cart</a>
+                 <span data-bs-toggle="popover" data-bs-trigger="hover"
+                    title="expensive!!" data-bs-content='Get 10% off if you purchase over $1,000.'>price is: <br> 850$</span>
+              </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 ">
+          <div class="card mx-auto mb-3">
+              <img src="img/best-shose.avif" class="card-img-top" alt="...">
+              <div class="card-body">
+                 <h5 class="card-title" price="450">Black shose</h5>
+                 <p class="card-text">press button to add the product to your cart</p>
+                 <a  class="btn btn-primary" price="550" prodcutName="Black shose">Add To Cart</a>
+                     <span data-bs-toggle="popover" data-bs-trigger="hover"
+                     title="expensive!!" data-bs-content='Get 10% off if you purchase over $1,000.'>price is: <br> 550$</span>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <aside class="col-md-3">
+      <div class="bg-light border" >
+        <!-- here is sticky aside -->
+        <div class="container d-flex flex-column gap-5  my-3">
+          <div class="border rounded border-primary  px-2">
+            <h2 class="display-6 text-info">your cart</h2>
+            <p class=" text-primary">here is the products you have been choiced :</p>
+            <p id="cart"></p>
+          </div>
+          <button id="btn" class="btn btn-primary align-self-center" data-bs-toggle="tooltip" title="the total price">show total price</button>
+          <div class="border rounded border-primary px-2">
+            <p class="text-primary ">    here is the total price for all products:    </p>
+            <p id="total-price" ></p>
+          </div>
+        
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- myh1java file -->
+  <script src="js/myjs.js"></script>
+
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
