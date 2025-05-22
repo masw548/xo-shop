@@ -30,3 +30,7 @@ a{
 .card .card-body span{
     color:#08285a
 }
+#sticky{
+    position: sticky;
+    top: 0;
+}
